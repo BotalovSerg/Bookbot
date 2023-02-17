@@ -11,7 +11,7 @@ def create_bookmarks_keyboard(*args: int) -> InlineKeyboardMarkup:
             text=f'{button} - {book[button][:100]}',
             callback_data=str(button)))
     # Добавляем в клавиатуру в конце две кнопки "Редактировать" и "Отменить"
-    bookmarks_kb.add(InlineKeyboardButton(text=LEXICON['edit_bookmarks_button'], callback_data='edit_bookmarks_button'),
+    bookmarks_kb.add(InlineKeyboardButton(text=LEXICON['edit_bookmarks_button'], callback_data='edit_bookmarks'),
                      InlineKeyboardButton(text=LEXICON['cancel'], callback_data='cancel'))
 
     return bookmarks_kb
